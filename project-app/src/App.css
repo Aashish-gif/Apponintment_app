@@ -1,0 +1,185 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container for the App */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading Styles */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2575fc; /* Cool blue color */
+  margin-bottom: 20px;
+}
+
+/* Image Background */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://via.placeholder.com/1500x1000'); /* Background image */
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Input fields */
+input[type=text],
+input[type=date],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #2575fc; /* Blue border */
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #f0f7ff; /* Light blue background */
+  transition: all 0.3s ease;
+}
+
+input[type=text]:focus,
+input[type=date]:focus {
+  border-color: #ff6f61; /* Highlight border on focus */
+  outline: none;
+  background-color: #e0f7fa; /* Lighter blue background */
+}
+
+/* Labels */
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Button Styling */
+button,
+input[type=submit] {
+  background-color: #ff6f61; /* Coral red color */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover,
+input[type=submit]:hover {
+  background-color: #ff3d29; /* Darker red */
+}
+
+button:active,
+input[type=submit]:active {
+  transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+/* Table Styling */
+#list {
+  font-family: 'Arial', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#list td,
+#list th {
+  border: 1px solid #2575fc;
+  padding: 12px;
+  text-align: center;
+}
+
+#list tr:nth-child(even) {
+  background-color: #f0f7ff; /* Alternating light background for rows */
+}
+
+#list tr:hover {
+  background-color: #d1e6f3; /* Hover effect for table rows */
+}
+
+#list th {
+  background-color: #2575fc;
+  color: white;
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Button styling inside table */
+#list button {
+  background-color: #2575fc;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#list button:hover {
+  background-color: #1c54b9; /* Darker blue on hover */
+}
+
+/* Clear All Button */
+button.clear-all {
+  background-color: #ffc107;
+  color: black;
+  margin-top: 20px;
+}
+
+button.clear-all:hover {
+  background-color: #ffb300;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .container {
+      width: 90%;
+      padding: 25px;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  input[type=text],
+  input[type=date],
+  button {
+      width: 100%;
+      margin-top: 15px;
+  }
+}
